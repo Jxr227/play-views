@@ -1,0 +1,3 @@
+@(job: Option[String], company: Option[String])
+
+<p> @job.map(jobName => jobName + " at " + company.getOrElse("Unknown")).getOrElse("Unemployed")</p>

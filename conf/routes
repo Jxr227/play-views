@@ -1,5 +1,6 @@
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
+GET     /:firstName/:lastName                           controllers.NameController.name(firstName: String, lastName: String)
+GET     /people                                         controllers.PeopleController.people()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
